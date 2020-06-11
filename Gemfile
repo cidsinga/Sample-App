@@ -11,6 +11,7 @@ gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
 gem 'tzinfo-data'
 gem 'bootstrap-sass', '3.4.1'
+gem 'pry', '~> 0.13.1'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
