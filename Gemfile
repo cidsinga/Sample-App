@@ -10,7 +10,7 @@ gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
 gem 'tzinfo-data'
 gem 'bootstrap-sass', '3.4.1'
-gem 'wdm', '>= 0.1.0'
+# gem 'wdm', '>= 0.1.0'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
