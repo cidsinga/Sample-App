@@ -23,16 +23,16 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    if params[:user][:password].empty?                  # Case (3)
-      @user.errors.add(:password, "can't be empty")
+    if params[:user][:password].empty?
+      @user.errors.add(:password, "can't be empyt")
       render 'edit'
-    elsif @user.update(user_params)                     # Case (4)
-      reset_session
+    elsif @user.update(user_params)
       log_in @user
+      @user.update_attribute(:reset_digest, nil)
       flash[:success] = "Password has been reset."
       redirect_to @user
     else
-      render 'edit'                                     # Case (2)
+      render 'edit'
     end
   end
 
@@ -61,21 +61,6 @@ class PasswordResetsController < ApplicationController
       if @user.password_reset_expired?
         flash[:danger] = "Password reset has expired."
         redirect_to new_password_reset_url
-      end
-    end
-
-    def update
-      if params[:user][:password].empty?
-        @user.erros.add(:password, "can't be empyt")
-        render 'edit'
-      elsif @user.update(user_params)
-        @user.forget
-        reset_session
-        Log_in @user
-        flash[:success] = "Password has been reset."
-        redirect_to @user
-      else
-        render 'edit'
       end
     end
 end
