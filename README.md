@@ -1,5 +1,7 @@
 # Ruby on Rails Tutorial sample application
 
+Steps to config user name and password reset in production in Listing 12.24 in turorial
+
 This is the sample application for
 [_Ruby on Rails Tutorial:
 Learn Web Development with Rails_](https://www.railstutorial.org/)
