@@ -33,7 +33,7 @@ Rails.application.configure do
   config.assets.compile = false
 
   # Store uploaded files on Amazon AWS.
-    config.active_storage.service = :amazon
+  config.active_storage.service = :amazon
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -41,9 +41,6 @@ Rails.application.configure do
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
-
-  # Store uploaded files on Amazon AWS.
-  config.active_storage.service = :amazon
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
@@ -81,8 +78,8 @@ Rails.application.configure do
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
+    :user_name      => Rails.application.credentials.dig(:sendgid, :username),
+    :password       => Rails.application.credentials.dig(:sendgid, :password),
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
