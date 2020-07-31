@@ -26,6 +26,13 @@ class FollowingTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "feed on Home page" do
+    get root_path
+    @user.feed.paginate(page: 1).each do |micropost|
+      assert_match micropost.content, response.body
+    end
+  end
+
   test "should follow a user the standard way" do
     assert_difference '@user.following.count', 1 do
       post relationships_path, params: { followed_id: @other.id }
