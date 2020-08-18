@@ -8,11 +8,11 @@ by [Michael Hartl](https://www.michaelhartl.com/).
 
 ## What I learned
 
-I had some experience with Ruby on Rails before working through this project. One particular fundemtal aspect of Ruby that I gasped more solidly than before are Hashes and the use of nesting hashing for params. Understanding Hashes is particularly necessary for understanding Strong Parameters, which was implemented to avoid mass assignment and further secure the app.
+I had some experience with Ruby on Rails before working through this project. One particular aspect of Ruby that I grasped more solidly than before are Hashes and the idea of nesting hashes in controller parameters. Understanding Hashes is particularly necessary in order to understanding Strong Parameters, which was implemented to protect against mass assignment security vulnerabilities.
 
 Regarding security, one aspect that I strayed from the curriculum was implementing the use of Rails' Encrypted Secrets. Instead of using a Enviornment Variables and a .env file, I added my Sendgrid and AWS credentials to the credentials.yml.
 
-Another concept I enjoyed becoming familiar with is a "through" table in postgres. As this app is essentially a Twitter clone, having the ability to have asymentrical relationships was necessary, and the Through table certainly streamlined the database.
+Another concept I enjoyed becoming familiar with is a join table in postgres. As this app is essentially a Twitter clone, having the ability to have many-to-many relationships was necessary, and the join table streamlined the database.
 
 ### Learning is in the friction...
 
@@ -22,7 +22,7 @@ Testing to see if Sendgrid was working caused some issues of it's own. Mainly th
 
 ### Possible updates
 
-This leads me to an addition I'd like to add to the app, which is the ability to resend and Auth email for a user. Additionally I'd like to refactor the app to use the Devise Gem for all authentication. The authentication used in the app was "hand made" for this app, but is more verbose than necessary as I could just use Devise to accomplish the same tasks.
+This leads me to an addition I'd like to add to the app, which is the ability to resend and Auth email for a user. Additionally I'd like to refactor the app to use the Devise Gem for all authentication. The authentication system used in the app was "hand made", but is generic functionality and Devise could easily replace it. Also, Devise has been battle tested by the ruby community, so it’s likely to be more secure.
 
 ### Notable Quote
 
