@@ -1,10 +1,16 @@
 # Ruby on Rails Tutorial sample application
 
+Deployed at https://cidsinga-sample-app.herokuapp.com/
+
 This is the sample application for
 [_Ruby on Rails Tutorial:
 Learn Web Development with Rails_](https://www.railstutorial.org/)
 (6th Edition)
 by [Michael Hartl](https://www.michaelhartl.com/).
+
+## Deployed At
+
+https://cidsinga-sample-app.herokuapp.com/
 
 ## What I learned
 
